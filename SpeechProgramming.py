@@ -16,18 +16,18 @@ PORT = 8883
 r_command_dict = {}
 
 
-def set_input_words(_input_str, _command_vars_dict):
+def set_variables_to_vars_dict(_input_str):
     words = [word for word in re.findall(r'[a-z]+[0-9]*|[0-9]+', _input_str) if word != '']
+    command_vars_dict = {}
     if words:
         for i in range(len(words)):
-            _command_vars_dict['w'+str(i+1)] = words[i]
+            command_vars_dict['w'+str(i+1)] = words[i]
+    return command_vars_dict
 
 
-def convert_speech_input(_speech_input):
-    vars_dict = {}
-    set_input_words(_speech_input, vars_dict)
-
-    converted_command = string.Template(r_command_dict[_speech_input])
+def convert_speech_input(_speech_input_str):
+    vars_dict = set_variables_to_vars_dict(_speech_input_str)
+    converted_command = string.Template(r_command_dict[_speech_input_str])
     return converted_command.safe_substitute(vars_dict)
 
 
