@@ -1,4 +1,6 @@
 # VoiceProgramming
+https://www.youtube.com/watch?v=L_jGw5W3GcU
+
 音声でプログラミングするためのクライアント．
 ルールに従った発話によってGoogle Homeを使ったプログラミングができる．
 
