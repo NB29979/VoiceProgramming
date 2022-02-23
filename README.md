@@ -2,9 +2,6 @@
 音声でプログラミングするためのクライアント．
 
 ルールに従った発話によってGoogle Homeを使ったプログラミングができる．
-
-https://www.youtube.com/watch?v=L_jGw5W3GcU
-
 ローカルへの通知にはMQTTを使う．
 これには https://beebotte.com/ が便利．
 
